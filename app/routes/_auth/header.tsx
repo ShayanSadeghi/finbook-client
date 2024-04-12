@@ -11,15 +11,21 @@ import { Menu } from "@mui/icons-material";
 function AuthHeader() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar>
+      <AppBar position="relative">
         <Toolbar>
-          <IconButton>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
             <Menu />
           </IconButton>
-          <Typography variant="h6" component="div">
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Finbook
           </Typography>
-          <Button>Login</Button>
+          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </Box>
