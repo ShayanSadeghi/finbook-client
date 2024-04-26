@@ -1,9 +1,9 @@
 import { Form } from "@remix-run/react";
 import { Button, Grid, TextField } from "@mui/material";
 
-function login() {
+function LoginForm() {
   return (
-    <Form>
+    <Form method="post" id="login-form">
       <Grid
         container
         justifyContent="center"
@@ -13,7 +13,7 @@ function login() {
         <Grid item xs={11} md={4}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <TextField name="username" label="Username" fullWidth required />
+              <TextField name="email" label="Username" fullWidth required />
             </Grid>
             <Grid item xs={12}>
               <TextField name="password" label="Password" fullWidth required />
@@ -35,4 +35,4 @@ function login() {
   );
 }
 
-export default login;
+export default LoginForm;
