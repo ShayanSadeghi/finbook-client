@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const APIURL = "http://localhost:8000";
+const APIURL = process.env.APIURL;
 
 export async function loginApi(userData: any) {
   return axios
