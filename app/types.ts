@@ -24,7 +24,7 @@ export type Resource = {
 };
 
 export type Transaction = {
-  id: number;
+  id: number | null;
   amount: number;
   title: string;
   description: string;

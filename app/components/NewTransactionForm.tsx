@@ -1,4 +1,5 @@
 import { Form } from "@remix-run/react";
+import { ActionFunctionArgs, json } from "@remix-run/node";
 import {
   Grid,
   Select,
@@ -18,7 +19,7 @@ function NewTransactionForm({
   resources,
 }: Props) {
   return (
-    <Form method="post" id="transaction-form">
+    <Form method="post" action="/dashboard" id="transaction-form">
       <Grid
         container
         justifyContent="start"
@@ -44,7 +45,7 @@ function NewTransactionForm({
             <InputLabel id="account-select-label">Account</InputLabel>
             <Select
               labelId="account-select-label"
-              name="account"
+              name="account_id"
               label="Account"
             >
               {accounts.map((account) => (
@@ -61,7 +62,7 @@ function NewTransactionForm({
             <InputLabel id="resourceCat-select-label">Category</InputLabel>
             <Select
               labelId="resourceCat-select-label"
-              name="resource_category"
+              name="resource_id"
               label="Category"
             >
               {resourceCategories?.map((category) => (
