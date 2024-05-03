@@ -30,4 +30,6 @@ export type Transaction = {
   description: string;
   resource_id: number;
   account_id: number;
+  account_detail: any;
+  resource_detail: any;
 };

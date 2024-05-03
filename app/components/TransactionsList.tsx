@@ -12,6 +12,7 @@ import {
 import { Transaction } from "~/types";
 
 function TransactionsList({ transactions }: Props) {
+  console.log(transactions);
   return (
     <TableContainer component={Paper}>
       <Table>
@@ -32,9 +33,9 @@ function TransactionsList({ transactions }: Props) {
               <TableCell>{index + 1}</TableCell>
               <TableCell>{trx.title}</TableCell>
               <TableCell>{trx.amount}</TableCell>
-              <TableCell>Bank 1</TableCell>
-              <TableCell>Cat 1</TableCell>
-              <TableCell>{trx.resource_id}</TableCell>
+              <TableCell>{trx.account_detail.title}</TableCell>
+              <TableCell>{trx.resource_detail.category_detail.title}</TableCell>
+              <TableCell>{trx.resource_detail.title}</TableCell>
               <TableCell>{trx.description}</TableCell>
             </TableRow>
           ))}
